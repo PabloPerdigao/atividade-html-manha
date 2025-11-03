@@ -1,14 +1,160 @@
+/*Reset CSS*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Remover no merge com seção principal*/
-#main{
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
+body {
+    font-family: 'Raleway', sans-serif;
+
+    min-height: 100vh; 
+    
+    display: flex;
+
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+:root {
+    --cor-primaria: #243650;
+    --cor-secundaria: #F4BC1D;
+    --cor-terciaria: #A3C4BC;
+    --cor-fonte: rgba(255,255,255,.85);
+    --white-color: #FFFFFF;
+}
+
+/* Início feature-cabecalho */
+    .header-container {
+        background-color: var(--cor-primaria);
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+    
+        padding: 48px;
+        z-index: 100;
+    }
+
+   
+    .header-logo {
+        color: rgba(0,0,0,0);
+        
+        width: 72px;
+        height: 72px;
+        
+        background: url(https://www.pdcase.com/img/logo-pdcase.svg) no-repeat;
+        transition: width .15s ease-in-out,height .15s ease-in-out,background-position .15s ease-in-out;
+    }
+
+
+    #title-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-color);
+        gap: 32px;
+    }
+
+    .header-title h1 {
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--white-color);
+        margin-bottom: 4px;
+    }
+
+    .header-title p {
+        font-size: 20px;
+        font-weight: 300;
+        color: var(--cor-fonte);
+
+        background-color: rgb(52, 79, 117);
+
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    nav {
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav a {
+        font-size: 24px;
+        font-weight: 400;
+        text-decoration: none;
+        border-radius: 24px;
+        float: left;
+        padding: 11px 24px;
+        color: var(--cor-fonte);
+    }
+
+    nav a:hover {
+        color: var(--white-color);
+    }
+
+/* Fim feature-cabecalho */
+
+
+/* ---- Início main Pedro ---- */
+
+  main {
+      flex-grow: 1;
+  }
+
+.noticiasSec >h2{
+    font-size: 35px;
+    padding: 12px;
+    color: #203655
+}
+
+.noticiasSec> div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 345px));
+    gap: 12px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.noticia {
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+    transition: all linear 100ms;
+    cursor: pointer;
+}
+
+.noticia > img {
+    width: 300px;
+    height: 180px;
+    border-radius: 6px;
+}
+
+.noticia:hover{
+    
+    box-shadow: 6px 6px 6px #00000024;
+    border-top: 3px solid #F4BE24;
+    border-left: 3px solid #F4BE24;
 }
 
 #noticiasSection{
@@ -28,6 +174,7 @@
     font-weight: 800;
 }
 
+/* ---- Início Noticias Secundárias ---- */
 .noticiaSec{
     padding: 8px 20px;
     margin: 20px 12px;
@@ -52,3 +199,101 @@
         border-left: 1px solid #6d585e;
     }
 }
+
+/* ---- Fim main Pedro ---- */
+
+
+
+/*Início footer */
+
+    footer {
+        background-color: var(--cor-primaria);
+        color: var(--white-color);
+        padding: 24px 0;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px; 
+    }
+
+    .footer-logo {
+        width: 72px;
+        height: 72px;
+        background: url(https://www.pdcase.com/img/logo-pdcase.svg) no-repeat;
+        transition: width .15s ease-in-out,height .15s ease-in-out,background-position .15s ease-in-out;
+
+        display: block;
+        background-position: 0 bottom;
+        filter: invert(1);
+    }
+
+    #social-links {
+        display: flex;
+        justify-content: center;
+
+        gap: 16px; 
+    }
+
+    #social-links img {
+        height: 40px;
+    }
+
+    #social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%;
+    padding: 8px;
+    
+    transition: background-color 0.2s ease;
+    }
+/*Fim footer */
+
+
+/* Início feature-cabecalho-Responsivo */
+
+    @media (max-width: 768px) {
+        .header-container{
+            margin: 0px;
+            flex-direction: column;
+            align-items: center;
+            top: 0;
+            max-height: none;
+            padding: 24px;
+            gap: 24px;
+        }
+
+        #title-area {
+            flex-direction: row;
+            gap:0;
+
+        }
+        
+        .header-logo {
+            margin-right: 12px; 
+        }
+
+
+        .header-title h1 {
+            text-align: flex-start;
+            font-size: 24px;
+        }
+
+        .header-title p {
+            font-size: 14px;
+        }
+
+        nav ul {
+            flex-direction: row;
+            align-items: flex-end;
+        
+            gap: 14px;
+        }
+
+        nav a {
+            font-size: 20px;
+        }
+    }
+
+/* Fim feature-cabecalho-Responsivo */
