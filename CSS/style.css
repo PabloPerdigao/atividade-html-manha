@@ -212,6 +212,7 @@ html {
 
 #avisos >h2{
     font-size: 35px;
+    color: #203655;
 }
 
 ul{
@@ -220,7 +221,7 @@ ul{
 }
 
 li.aviso{
-    font-size: 25px;
+    font-size: 18px;
     padding: 10px;
     margin: 8px;
     border-radius: 6px;
@@ -262,10 +263,13 @@ li.aviso-importante{
 #linksRelacionados > h2{
     font-size: 35px;
     margin-bottom: 20px;
+    color: #203655;
+
 }
 
 #linksRelacionados > div{
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
