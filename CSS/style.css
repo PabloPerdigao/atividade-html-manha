@@ -7,6 +7,12 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+
+    min-height: 100vh; 
+    
+    display: flex;
+
+    flex-direction: column;
 }
 
 html {
@@ -28,13 +34,15 @@ html {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
+
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
-        max-height: 25vh;
+        
     
         padding: 48px;
+        z-index: 100;
     }
 
    
@@ -106,13 +114,20 @@ html {
 
 /* Fim feature-cabecalho */
 
+
+/* ---- Início main Pedro ---- */
+
+  main {
+      flex-grow: 1;
+  }
+
 .noticiasSec >h2{
     font-size: 35px;
     padding: 12px;
     color: #203655
 }
 
-.noticiasSec> div{
+.noticiasSec> div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 345px));
     gap: 12px;
@@ -120,7 +135,7 @@ html {
     padding: 10px;
 }
 
-.noticia{
+.noticia {
     padding: 20px;
     border-radius: 12px;
     border-top: 3px solid transparent;
@@ -141,6 +156,57 @@ html {
     border-top: 3px solid #F4BE24;
     border-left: 3px solid #F4BE24;
 }
+
+/* ---- Fim main Pedro ---- */
+
+
+
+/*Início footer */
+
+    footer {
+        background-color: var(--cor-primaria);
+        color: var(--white-color);
+        padding: 24px 0;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px; 
+    }
+
+    .footer-logo {
+        width: 72px;
+        height: 72px;
+        background: url(https://www.pdcase.com/img/logo-pdcase.svg) no-repeat;
+        transition: width .15s ease-in-out,height .15s ease-in-out,background-position .15s ease-in-out;
+
+        display: block;
+        background-position: 0 bottom;
+        filter: invert(1);
+    }
+
+    #social-links {
+        display: flex;
+        justify-content: center;
+
+        gap: 16px; 
+    }
+
+    #social-links img {
+        height: 40px;
+    }
+
+    #social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%;
+    padding: 8px;
+    
+    transition: background-color 0.2s ease;
+    }
+/*Fim footer */
+
 
 /* Início feature-cabecalho-Responsivo */
 
