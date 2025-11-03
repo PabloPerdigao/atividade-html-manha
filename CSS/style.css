@@ -121,6 +121,10 @@ html {
       flex-grow: 1;
   }
 
+#noticiasPrincipais{
+    flex: 1;
+}
+
 .noticiasSec >h2{
     font-size: 35px;
     padding: 12px;
