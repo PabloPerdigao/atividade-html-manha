@@ -253,6 +253,43 @@ li.aviso-importante{
     }
 }
 
+/* ---- Início Links ---- */
+
+#linksRelacionados{
+    padding: 20px;
+}
+
+#linksRelacionados > h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#linksRelacionados > div{
+    display: flex;
+    gap: 40px;
+}
+
+.linkRelacionado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.linkRelacionado > img{
+    width: 100px;
+}
+
+.linkRelacionado > h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+.linkRelacionado:hover{
+    cursor: pointer;
+}
+
 /* ---- Fim main Pedro ---- */
 
 
