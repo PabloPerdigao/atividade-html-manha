@@ -204,6 +204,55 @@ html {
     }
 }
 
+
+/* ---- Inicio Avisos ---- */
+#avisos{
+    padding: 30px;
+}
+
+#avisos >h2{
+    font-size: 35px;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li.aviso{
+    font-size: 25px;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li.aviso > img {
+    width: 40px;
+}
+
+li.aviso-urgente{
+    background-color: rgb(253, 39, 39);
+}
+
+
+li.aviso-normal{
+    background-color: rgb(23, 199, 23);
+}
+
+li.aviso-importante{
+    background-color: #F4BE24;
+}
+
+@media (max-width: 500px) {
+    ul{
+        display: block;
+    }
+}
+
 /* ---- Fim main Pedro ---- */
 
 
