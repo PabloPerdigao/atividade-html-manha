@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 700px){
+@media (max-width: 1024px){
     #noticiasSection{
         display: block;
     }
@@ -48,6 +48,7 @@
         padding: 12px;
         min-height: 0;
         width: 100vw;
+        max-width: none;
         border-left: 1px solid #6d585e;
     }
 }
