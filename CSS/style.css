@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#avisos{
+    padding: 30px;
+}
+
+li.aviso{
+    font-size: 25px;
+    padding: 30px;
+}
+
+ul li.aviso-urgente{
+    color: red;
+}
+
+li.aviso-normal{
+    color: green;
+}
+
+li.aviso-importante{
+    color: #ca9911;
+}
