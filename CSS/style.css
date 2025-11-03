@@ -3,15 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-main{
-    display: flex;
-}
 
 /*Remover no merge com seção principal*/
 #main{
     width: 100vw;
     height: 100vh;
     background-color: red;
+}
+
+#noticiasSection{
+    display: flex;
 }
 
 #noticiasSec{
@@ -36,4 +37,17 @@ main{
 .noticiaSec:hover >h3{
     color: #F4BE24;
     cursor: pointer;
+}
+
+@media (max-width: 700px){
+    #noticiasSection{
+        display: block;
+    }
+
+    #noticiasSec{
+        padding: 12px;
+        min-height: 0;
+        width: 100vw;
+        border-left: 1px solid #6d585e;
+    }
 }
